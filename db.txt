@@ -1,0 +1,9 @@
+db.products.update(
+{},
+   [{"$set":{
+   
+   Images: { $split: ["$Image", ","] }
+
+   }}], { multi: true }
+)
+//c
